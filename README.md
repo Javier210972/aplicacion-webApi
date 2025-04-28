@@ -5,7 +5,7 @@
 - .NET SDK: 7.0.203  
 - TargetFramework: net7.0  
 - Swashbuckle.AspNetCore: 6.4.0
-- 
+  
 ### Frontend
 - Node.js: 18.19.0  
 - npm: 10.2.3  

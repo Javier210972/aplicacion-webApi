@@ -1,15 +1,29 @@
 # aplicacion-webApi
 ## Versiones
 
-### Backend
+### Backend (ASP.NET Core)
 - .NET SDK: 7.0.203  
 - TargetFramework: net7.0  
 - Swashbuckle.AspNetCore: 6.4.0
   
-### Frontend
+### Frontend (Angular)
 - Node.js: 18.19.0  
 - npm: 10.2.3  
 - Angular CLI: 16.2.16  
 - @angular/core: 16.2.0
 - Package Manager: npm 10.2.3
-- bootstrap: 5.3.5 
+- bootstrap: 5.3.5
+
+## Como ejecutar el proyecto
+### Backend (ASP.NET Core Web API)
+```bash
+cd backend/Arithmetic.Api
+dotnet run
+```
+
+### FrontEnd (Angular)
+```bash
+cd frontend/arithmetic-app
+Solo la primera vez: npm install
+npm start
+```

@@ -27,9 +27,8 @@ dotnet run
 ```bash
 cd frontend/arithmetic-app
 ```
-Solo la primera vez:
 ```bash
-npm install
+Solo la primera vez: npm install
 ```
 ```bash
 npm start

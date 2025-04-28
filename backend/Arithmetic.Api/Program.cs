@@ -5,8 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Angular, Origenes permitidos 
 var allowedOrigins = builder.Configuration
-    .GetSection("AllowedOrigins")
-    .Get<string[]>();
+     .GetSection("AllowedOrigins")
+     .Get<string[]>()
+     ?? Array.Empty<string>();
 
 builder.Services.AddCors(options =>
 {
@@ -30,9 +31,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseAuthorization();
-
 app.UseCors();
+
+app.UseAuthorization();
 
 app.MapControllers();
 

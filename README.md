@@ -22,7 +22,7 @@
 cd backend/Arithmetic.Api
 ```
 ```bash
-dotnet run
+dotnet run --urls "http://localhost:5273"
 ```
 
 ### FrontEnd (Angular)

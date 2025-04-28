@@ -18,12 +18,19 @@
 ### Backend (ASP.NET Core Web API)
 ```bash
 cd backend/Arithmetic.Api
+```
+```bash
 dotnet run
 ```
 
 ### FrontEnd (Angular)
 ```bash
 cd frontend/arithmetic-app
-Solo la primera vez: npm install
+```
+Solo la primera vez:
+```bash
+npm install
+```
+```bash
 npm start
 ```

@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title text-center mb-4">Calculadora Aritmética</h3>
+          <form (ngSubmit)="calculate()" #calcForm="ngForm">
+            <div class="mb-3">
+              <label for="num1" class="form-label">Primer número</label>
+              <input type="number"
+                     id="num1"
+                     name="num1"
+                     class="form-control"
+                     [(ngModel)]="num1"
+                     required>
+            </div>
+            <div class="mb-3">
+              <label for="num2" class="form-label">Segundo número</label>
+              <input type="number"
+                     id="num2"
+                     name="num2"
+                     class="form-control"
+                     [(ngModel)]="num2"
+                     required>
+            </div>
+            <div class="mb-3">
+              <label for="operation" class="form-label">Operación</label>
+              <select id="operation"
+                      name="operation"
+                      class="form-select"
+                      [(ngModel)]="operation">
+                <option value="sum">Suma</option>
+                <option value="subtract">Resta</option>
+                <option value="multiply">Multiplicación</option>
+                <option value="divide">División</option>
+              </select>
+            </div>
+            <button type="submit"
+                    class="btn btn-primary w-100"
+                    [disabled]="calcForm.invalid">
+              Calcular
+            </button>
+          </form>
+          <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+            {{ errorMessage }}
+          </div>
+          <div *ngIf="result !== null" class="alert alert-success mt-3">
+            <strong>Resultado:</strong> {{ result }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
